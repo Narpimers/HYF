@@ -1,0 +1,580 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
+
+/* General Reset and Defaults */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Press Start 2P", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    line-height: 1.5;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+
+}
+
+li {
+    list-style: none;
+}
+
+/* Anchor (link) styles */
+a {
+    color: #fa713e;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+a:hover {   
+    color: #f1412e;
+    transition: all 0.6s ease;
+} 
+
+a:active {
+    color: #c11d0a;
+    transition: all 0.2s ease;
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Horizontal line styles */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #fa713e;
+    margin: 1em 0;
+}
+
+/* Header styles */
+header {
+    float: left;
+    width: 99.4%;
+    padding: 0.3%;
+    border-bottom: 2px solid #fa713e;
+    margin-top: 20px;
+}
+
+/* Social media hover effect */
+#smedia>a:hover {
+    border-bottom: 1px solid #fa713e;
+}
+
+header > div#logo > a > img {
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-left: 15%;
+    max-width: 450px;
+}
+
+#main-nav {
+    float: left;
+    width: 37%;
+    font-size: 2rem;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+#main-nav > a:hover {
+    border-bottom: 1px solid #fa713e;
+}
+
+#smedia {
+    float: right;
+    font-size: 2rem;
+    font-family: "Pixelify Sans", serif;
+}
+
+#logo {
+    max-width: 550px;
+}
+
+/* Adjustments for the "About" section */
+#main-nav > a:last-child {
+    margin-left: 10%;
+}
+
+    /* настройка медиа материалов */
+    iframe {
+        width:80%;
+        border-radius: 6px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+    }
+
+ /* Демонтрация работы через grid */
+    .media {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 30px;
+        border-bottom: #fa713e 1px solid;
+        padding-bottom: 5%;
+    } 
+
+    .media>h1 { 
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .media>#video1 {
+        grid-column: 2 / 7;
+        justify-self: center;
+
+    }
+
+    .media>#text1 {
+
+        grid-column: 7 / span 5;
+    }
+
+    .media>#text2 {
+        grid-column: 2 / 6;
+        text-align: left;
+        padding-left: 5%;
+    }
+
+
+    .media>#img2 {
+        grid-column: 7 / 9;
+        justify-self: center;
+        align-self: center;
+        
+    }
+
+    .media>#img3 {
+        grid-column: 9 / 11;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .media>#video2 {
+        grid-column: 2 / 4;
+        justify-self: center;
+    }
+
+    .media>#video3 {
+        grid-column: 4 / 6;
+        justify-self: center;
+    }
+
+    .media>#text3 {
+        grid-column: 6 / 12;
+    }
+
+    .media>p {
+        padding: 5% 10%;
+    }
+
+    header > div#logo > a > img {
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-left: 15%;
+    max-width: 450px;
+}
+
+#main-nav {
+    float: left;
+    width: 37%;
+    font-size: 2rem;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+#main-nav > a:hover {
+    border-bottom: 1px solid #fa713e;
+}
+
+#smedia {
+    float: right;
+    font-size: 2rem;
+    font-family: "Pixelify Sans", serif;
+}
+
+#logo {
+    max-width: 550px;
+}
+
+    /* Go top кнопка */
+.go-top {
+    position: fixed; 
+    left: 20px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none; 
+    font-size: 1.5rem;
+    color: #f1412e;
+    border: 1px solid #fa713e;
+    background-color: #e0e0e0;
+    padding: 0.8rem;
+  }
+  
+  /* меняем прозрачность при наведении мышкой */
+  .go-top:hover {
+    color: black;
+    border: 1px solid black;
+    background-color: #e0e0e0;
+  }
+  
+  /* модификатор для отображения кнопки */
+  .go-top--show {
+    display: block;
+  }
+
+footer {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 2%;
+}  
+
+.links>a {
+    padding-right: 5%;
+}
+
+.copy-right {
+    font-size: 0.8rem;
+}
+
+/* Media Queries for Different Screen Sizes */
+@media (min-width: 1500px) {
+    /* Header logo styles */
+    header > div#logo > a > span {
+        color: black;
+        font-size: 2rem;
+        margin-left: 15%;
+        font-family: "Pixelify Sans", serif;
+    }
+
+    #logo> {
+        float: left;
+        width: 37%;
+    }
+
+    #smedia {
+        margin-top: 5rem;
+        margin-right: 5%;
+    }
+    .ham-menu {
+        display: none;
+        visibility: hidden;
+    }
+
+
+}
+
+@media (max-width: 1499px) and (min-width: 550px) {
+    /* Adjustments for medium-sized screens */
+    header > div#logo > a > img {
+        width: 20em;
+    }
+
+    header > div#logo > a > span {
+        color: black;
+        font-size: 2em;
+        margin-left: 15%;
+        font-family: "Pixelify Sans", serif;
+    }
+
+    #logo {
+        width: 50%;
+    }
+
+    #main-nav {
+        visibility: hidden;
+        display: none;
+    }
+
+    #smedia {
+        margin-right: 10%;
+        margin-bottom: 10%;
+
+    }
+    
+    .ham-menu {
+        display: none;
+        visibility: hidden;
+    }
+
+    .left, .right {
+       font-size: 0.9rem;
+    }
+
+    .rightAboutUs {
+        visibility: hidden;
+        display: none;
+    }
+
+     /* grid часть */
+     .media>#text1 {
+        grid-column: 3 / 11;
+        border-bottom: black 1px solid;
+        text-align: center;
+     }
+
+     .media>#text2,  .media>#text3, .media>#video1 {
+        grid-column: 3 / 11;
+        padding-left: 0%;
+        text-align: center;
+     }
+
+     .media>#img2, .media>#video2 {
+        grid-column: 4 / 7;
+     }
+
+     .media>#img3, .media>#video3 {
+        grid-column: 7 / 10;
+     }
+
+     .copy-right {
+        font-size: 0.8rem;
+     }    
+}
+
+    
+
+@media (max-width: 549px) {
+    /* Adjustments for small screens */
+    header > div#logo > a > img {
+        margin-left: 5%;
+    }
+
+    header > div#logo > a > span {
+        color: black;
+        font-size: 1em;
+        font-family: "Pixelify Sans", serif;
+    }
+
+
+    #logo {
+        width: 50%;
+        margin: auto;
+        max-width: 550px;
+    }
+
+    /* скрываю часть nav-меню и Настройка текста в tAboutUs */
+    #main-nav {
+        visibility: hidden;
+        display: none;
+    }
+
+    #smedia>a, .rightAboutUs {
+        visibility: hidden;
+        display: none; 
+    }
+
+    .leftAboutUs>p{
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+
+    .leftAboutUs>h2  {
+
+        font-size: 1.5rem;
+        font-family: "Pixelify Sans", serif; ;
+    }
+    .leftAboutUs>h1 {
+        font-size: 1.68rem;
+    }
+
+     
+    .media>#text1 {
+        border-bottom: black 1px solid;
+     }
+
+    .media>#text2 {
+        padding-left: 6%;
+     }
+
+    .media>#video2,
+    .media>#video3,
+    .media>#img2,
+    .media>#img3,
+    .media>#text2,
+    .media>#text1,
+    .media>#text3,
+    .media>#video1 {
+        grid-column: 2 / span 10;
+        text-align: center;
+     }
+
+     .media>#text3 {
+        padding-left: 6%;
+     }
+
+     .media>#text3,
+     .media>#text2,
+     .media>#text1,
+     footer{
+        font-size: 0.8rem;
+     }
+     
+     .copy-right {
+        font-size: 0.5rem;
+     }
+
+     .go-top {
+        display: none;
+     }
+}
+
+/* off-screen-menu */
+.off-screen-menu {
+background-color: #fa713e;
+height: 100vh;
+width: 100%;
+max-width: 450px;
+position: fixed;
+top: 0;
+right: -450px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-size: 2rem;
+transition: .3s ease;
+}
+
+.off-screen-menu>ul>li {
+padding: 20px;
+}
+
+.off-screen-menu>ul>li>a {
+    padding: 20px;
+    color: black;
+}
+.off-screen-menu>ul>li>a:hover {
+    padding: 20px;
+    color: #e0e0e0;
+}
+.off-screen-menu.active {
+right: 0;
+}
+.ham-menu {
+height: 50px;
+width: 40px;
+margin-left: auto;
+position: relative;
+right: 10%;
+bottom: 20px;
+}
+
+.ham-menu>span {
+height: 5px;
+width: 100%;
+background-color: #fa713e;
+border-radius: 25px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+transition: .3s ease;
+}
+
+.ham-menu>span:nth-child(1) {
+top: 25%;
+}
+
+.ham-menu>span:nth-child(3) {
+top: 75%;
+}
+
+/*  transition ham-menu */
+.ham-menu.active span {
+background-color: rgb(0, 0, 0);
+}
+.ham-menu.active span:nth-child(1) {
+top: 50%;
+transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+top: 50%;
+transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*AboutUs часть вебсайта */
+.aboutUs {
+display: flex;
+flex-direction: row; /* Разделяет элементы по горизонтали */
+border-bottom: #fa713e 2px solid;
+}
+
+.leftAboutUs, .rightAboutUs {
+width: 50%;
+padding-top: 3%;
+
+}
+
+.leftAboutUs {
+display: flex;
+flex-direction: column; /* Вертикальное размещение элементов */
+text-align: left; /* Текст по центру */; 
+margin: 1% 10% 5% 10%;
+flex: 2;
+
+}
+
+.leftAboutUs>h2 {
+margin-top: 2%;
+}
+
+.leftAboutUs>p {
+margin-top: 3%;
+}
+
+.rightAboutUs {
+position: relative;
+flex: 1;
+
+
+}
+/* Скобки */
+.brackets {
+position: relative;
+}
+
+/* Текст в кобках */
+.brackets>h2 {
+color: #fa713e;
+font-size: 20rem;
+font-family: "Jacquard 12", serif;
+letter-spacing: 35px;   
+}
+
+/* Скобки */
+.brackets>span {
+position: absolute;
+top: 243px;
+left: 65px;
+font-size: 1.2rem;
+text-align: center;
+
+}
